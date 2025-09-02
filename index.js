@@ -228,7 +228,7 @@ async function updateBookByTitle(title, dataToUpdate) {
     }
 }
 
-app.post("/books/:title", async (req, res) => {
+app.post("/books/title/:title", async (req, res) => {
     try {
         const newBookData = await updateBookByTitle(req.params.title, req.body);
 
