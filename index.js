@@ -3,7 +3,9 @@ const express = require("express");
 const fs = require("fs");
 const Book = require("./model/book.model");
 initializeDatabase();
+const cors = require("cors");
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // add a book
